@@ -1,0 +1,11 @@
+.DS_Store/*
+
+nrf_sdks/*
+!nrf_sdks/nRF5-SDK-for-Mesh
+!nrf_sdks/README.md
+
+_build/
+build/
+
+material/*
+site
