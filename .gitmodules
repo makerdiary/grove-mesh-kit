@@ -1,3 +1,6 @@
 [submodule "nrf_sdks/nRF5-SDK-for-Mesh"]
 	path = nrf_sdks/nRF5-SDK-for-Mesh
 	url = https://github.com/makerdiary/nRF5-SDK-for-Mesh.git
+[submodule "deps/openthread"]
+	path = deps/openthread
+	url = https://github.com/makerdiary/openthread.git
