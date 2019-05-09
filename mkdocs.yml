@@ -1,0 +1,136 @@
+# Copyright (c) 2019 makerdiary
+
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+
+# The above copyright notice and this permission notice shall be included in all
+# copies or substantial portions of the Software.
+
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+# SOFTWARE.
+
+# Project information
+site_name: Grove Mesh Kit Documentation
+site_description: The documentation offers all you need to start developing with Grove Mesh Kit.
+site_author: makerdiary
+site_url: https://wiki.makerdiary.com/grove-mesh-kit/
+
+# Repository
+repo_name: makerdiary/grove-mesh-kit
+repo_url: https://github.com/makerdiary/grove-mesh-kit
+edit_uri: ""
+
+# Copyright
+copyright: 'Copyright &copy; 2019 makerdiary'
+
+# Configuration
+theme:
+  name: null
+  custom_dir: material
+
+  # 404 page
+  static_templates:
+    - 404.html
+
+  # Don't include MkDocs' JavaScript
+  include_search_page: false
+  search_index_only: true
+
+  # Default values, taken from mkdocs_theme.yml
+  language: en
+  feature:
+    tabs: true
+  palette:
+    primary: marsala
+    accent: marsala
+  font:
+    text: Roboto
+    code: Roboto Mono
+  favicon: assets/images/favicon.png
+  logo: assets/images/logo.svg
+
+# Customization
+extra:
+  social:
+    - type: comments
+      link: https://community.makerdiary.com
+    - type: globe
+      link: https://makerdiary.com
+    - type: github-alt
+      link: https://github.com/makerdiary
+    - type: twitter
+      link: https://twitter.com/makerdiary
+    - type: facebook
+      link: https://www.facebook.com/makerdiary
+#  disqus: 'makerdiary'
+#  discourse: 'community.makerdiary.com'
+
+# Extensions
+markdown_extensions:
+  - markdown.extensions.admonition
+  - markdown.extensions.codehilite:
+      guess_lang: false
+  - markdown.extensions.def_list
+  - markdown.extensions.footnotes
+  - markdown.extensions.meta
+  - markdown.extensions.toc:
+      permalink: true
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+extra_javascript:
+  - 'javascripts/jquery.qrcode.min.js'
+
+# Page tree
+nav:
+  - Introduction: index.md
+  - Getting Started: getting-started.md
+  - nRF5 SDK: setting-up-nrf5-sdk.md
+  - Bluetooth Mesh:
+    - Overview: bluetooth-mesh/index.md
+    - Getting Started: bluetooth-mesh/getting-started.md
+    - Setting Up the Mesh SDK: bluetooth-mesh/setting-up-the-mesh-sdk.md
+    - Building & Running the examples: bluetooth-mesh/building-n-running-the-examples.md
+    - Creating your own targets: bluetooth-mesh/creating-your-own-targets.md
+    - License: bluetooth-mesh/license.md
+  - OpenThread Mesh:
+    - Overview: openthread-mesh/index.md
+    - Getting Started: openthread-mesh/getting-started.md
+    - Setting Up the Thread SDK: openthread-mesh/setting-up-the-thread-sdk.md
+    - Building & Running the examples: openthread-mesh/building-n-running-the-examples.md
+    - OpenThread Border Router: openthread-mesh/openthread-border-router.md
+    - Thread Topology Monitor: openthread-mesh/thread-topology-monitor.md
+    - Thread Network Sniffer: openthread-mesh/thread-network-sniffer.md
+    - License: openthread-mesh/license.md
+  - Where to buy: where-to-buy.md
+  - Contributing: CONTRIBUTING.md
+  - License: license.md
+
+# Google Analytics
+google_analytics:
+  - 'UA-54344624-2'
+  - 'auto'
