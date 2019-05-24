@@ -1,0 +1,904 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="The documentation offers all you need to start developing with Grove Mesh Kit.">
+      
+      
+        <link rel="canonical" href="https://wiki.makerdiary.com/grove-mesh-kit/bluetooth-mesh/building-n-running-the-examples/">
+      
+      
+        <meta name="author" content="makerdiary">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.0.1">
+    
+    
+      
+        <title>Building & Running the examples - Grove Mesh Kit Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.982221ab.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.3b80946a.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.1f0bcf2b.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+    
+      
+        
+<script>
+  window.ga = window.ga || function() {
+    (ga.q = ga.q || []).push(arguments)
+  }
+  ga.l = +new Date
+  /* Setup integration and send page view */
+  ga("create", "UA-54344624-2", "auto")
+  ga("set", "anonymizeIp", true)
+  ga("send", "pageview")
+  /* Register handler to log search on blur */
+  document.addEventListener("DOMContentLoaded", () => {
+    if (document.forms.search) {
+      var query = document.forms.search.query
+      query.addEventListener("blur", function() {
+        if (this.value) {
+          var path = document.location.pathname;
+          ga("send", "pageview", path + "?q=" + this.value)
+        }
+      })
+    }
+  })
+</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="marsala" data-md-color-accent="marsala">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="__github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#building-and-running-the-mesh-examples" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://wiki.makerdiary.com/grove-mesh-kit/" title="Grove Mesh Kit Documentation" class="md-header-nav__button md-logo">
+          
+            <img src="../../assets/images/logo.svg" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Grove Mesh Kit Documentation
+            </span>
+            <span class="md-header-nav__topic">
+              Building & Running the examples
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/makerdiary/grove-mesh-kit" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    makerdiary/grove-mesh-kit
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../.." title="Introduction" class="md-tabs__link">
+        Introduction
+      </a>
+    
+  </li>
+
+      
+        
+      
+        
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../" title="Bluetooth Mesh" class="md-tabs__link md-tabs__link--active">
+          Bluetooth Mesh
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../openthread-mesh/" title="OpenThread Mesh" class="md-tabs__link">
+          OpenThread Mesh
+        </a>
+      
+    </li>
+  
+
+      
+        
+      
+        
+      
+        
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="https://wiki.makerdiary.com/grove-mesh-kit/" title="Grove Mesh Kit Documentation" class="md-nav__button md-logo">
+      
+        <img src="../../assets/images/logo.svg" width="48" height="48">
+      
+    </a>
+    Grove Mesh Kit Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/makerdiary/grove-mesh-kit" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    makerdiary/grove-mesh-kit
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Introduction" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../getting-started/" title="Getting Started" class="md-nav__link">
+      Getting Started
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../setting-up-nrf5-sdk/" title="nRF5 SDK" class="md-nav__link">
+      nRF5 SDK
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+    
+    <label class="md-nav__link" for="nav-4">
+      Bluetooth Mesh
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Bluetooth Mesh
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../getting-started/" title="Getting Started" class="md-nav__link">
+      Getting Started
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../setting-up-the-mesh-sdk/" title="Setting Up the Mesh SDK" class="md-nav__link">
+      Setting Up the Mesh SDK
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Building & Running the examples
+      </label>
+    
+    <a href="./" title="Building & Running the examples" class="md-nav__link md-nav__link--active">
+      Building & Running the examples
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#generating-build-files" title="Generating build files" class="md-nav__link">
+    Generating build files
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#building-the-stack-and-examples" title="Building the stack and examples" class="md-nav__link">
+    Building the stack and examples
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-the-example" title="Running the example" class="md-nav__link">
+    Running the example
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-steps" title="Next Steps" class="md-nav__link">
+    Next Steps
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-an-issue" title="Create an Issue" class="md-nav__link">
+    Create an Issue
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../creating-your-own-targets/" title="Creating your own targets" class="md-nav__link">
+      Creating your own targets
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../license/" title="License" class="md-nav__link">
+      License
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      OpenThread Mesh
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        OpenThread Mesh
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../openthread-mesh/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../openthread-mesh/getting-started/" title="Getting Started" class="md-nav__link">
+      Getting Started
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../openthread-mesh/setting-up-the-thread-sdk/" title="Setting Up the Thread SDK" class="md-nav__link">
+      Setting Up the Thread SDK
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../openthread-mesh/building-n-running-the-examples/" title="Building & Running the examples" class="md-nav__link">
+      Building & Running the examples
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../openthread-mesh/openthread-border-router/" title="OpenThread Border Router" class="md-nav__link">
+      OpenThread Border Router
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../openthread-mesh/thread-topology-monitor/" title="Thread Topology Monitor" class="md-nav__link">
+      Thread Topology Monitor
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../openthread-mesh/thread-network-sniffer/" title="Thread Network Sniffer" class="md-nav__link">
+      Thread Network Sniffer
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../openthread-mesh/license/" title="License" class="md-nav__link">
+      License
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../where-to-buy/" title="Where to buy" class="md-nav__link">
+      Where to buy
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../CONTRIBUTING/" title="Contributing" class="md-nav__link">
+      Contributing
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../license/" title="License" class="md-nav__link">
+      License
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#generating-build-files" title="Generating build files" class="md-nav__link">
+    Generating build files
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#building-the-stack-and-examples" title="Building the stack and examples" class="md-nav__link">
+    Building the stack and examples
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-the-example" title="Running the example" class="md-nav__link">
+    Running the example
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-steps" title="Next Steps" class="md-nav__link">
+    Next Steps
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-an-issue" title="Create an Issue" class="md-nav__link">
+    Create an Issue
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="building-and-running-the-mesh-examples">Building and Running the Mesh examples<a class="headerlink" href="#building-and-running-the-mesh-examples" title="Permanent link">&para;</a></h1>
+<p>This section describes how to build the mesh library and example applications with <em>CMake</em>, and the run <a href="https://github.com/makerdiary/nRF5-SDK-for-Mesh/tree/master/examples/my_light_switch">my light switch</a> example. </p>
+<p>Before you start building, remember to set up the mesh development environment first. See <a href="../setting-up-the-mesh-sdk">Setting Up the Mesh SDK</a> for details.</p>
+<h2 id="generating-build-files">Generating build files<a class="headerlink" href="#generating-build-files" title="Permanent link">&para;</a></h2>
+<p>Good practice is to create a <code>build</code> folder in the <code>grove-mesh-kit</code> directory, where all artifacts generated by the Ninja build system are stored:</p>
+<p>Open terminal and change directory to:</p>
+<div class="codehilite"><pre><span></span><span class="nb">cd</span> ./grove-mesh-kit
+</pre></div>
+
+<p>Creat a <code>build</code> folder and change directory to it:
+<div class="codehilite"><pre><span></span>mkdir build <span class="o">&amp;&amp;</span> <span class="nb">cd</span> build
+</pre></div>
+Before you can build with Ninja, you must generate the correct build files with CMake.</p>
+<div class="codehilite"><pre><span></span>cmake -G Ninja -DTOOLCHAIN<span class="o">=</span>gccarmemb -DPLATFORM<span class="o">=</span>nrf52840_xxAA -DBOARD<span class="o">=</span>nrf52840_mdk -DFLASHER<span class="o">=</span>pyocd ../nrf_sdks/nRF5-SDK-for-Mesh/
+</pre></div>
+
+<p><img alt="" src="../assets/images/generating-mesh-build-files.png" /></p>
+<h2 id="building-the-stack-and-examples">Building the stack and examples<a class="headerlink" href="#building-the-stack-and-examples" title="Permanent link">&para;</a></h2>
+<p>After the Ninja build files are generated, running <code>ninja &lt;target&gt;</code> to build the targets. Here we take the target <code>my_light_switch_client</code> as an example:</p>
+<p><div class="codehilite"><pre><span></span>ninja my_light_switch_client_nrf52840_xxAA_s140_6.1.0
+</pre></div>
+<img alt="" src="../assets/images/building-my-light-switch-client.png" /></p>
+<p>Other targets are ready for building. For example:
+<div class="codehilite"><pre><span></span>ninja my_light_switch_server_nrf52840_xxAA_s140_6.1.0
+</pre></div>
+<div class="codehilite"><pre><span></span>ninja my_light_switch_provisioner_nrf52840_xxAA_s140_6.1.0
+</pre></div></p>
+<h2 id="running-the-example">Running the example<a class="headerlink" href="#running-the-example" title="Permanent link">&para;</a></h2>
+<p>To run examples on your nRF52840-MDK, first connect it to your computer with a USB cable. When your board is detected, run <code>ninja flash_&lt;your target&gt;</code> to flash the example:</p>
+<p><div class="codehilite"><pre><span></span>ninja flash_my_light_switch_client_nrf52840_xxAA_s140_6.1.0
+</pre></div>
+<img alt="" src="../assets/images/flashing-my-light-switch-client.png" /></p>
+<p>Run a terminal application like <a href="https://www.chiark.greenend.org.uk/~sgtatham/putty/">PuTTY</a> or <a href="https://www.gnu.org/software/screen/manual/screen.html">screen</a> to print the log information:</p>
+<p><div class="codehilite"><pre><span></span>screen /dev/cu.usbmodem141102 <span class="m">115200</span>
+</pre></div>
+<img alt="" src="../assets/images/printing-my-light-switch-client-log.png" /></p>
+<p>Flash other nRF52840-MDK boards with <em>Server</em> target:
+<div class="codehilite"><pre><span></span>ninja flash_my_light_switch_server_nrf52840_xxAA_s140_6.1.0
+</pre></div></p>
+<p>You can use the <a href="https://www.nordicsemi.com/Software-and-Tools/Development-Tools/nRF-Mesh">nRF Mesh mobile app</a> to provision the <em>client</em> and <em>server</em> devices:</p>
+<p><a href="../assets/images/nrf-mesh-scanning-devices.png"><img alt="" src="../assets/images/nrf-mesh-scanning-devices.png" /></a></p>
+<h2 id="next-steps">Next Steps<a class="headerlink" href="#next-steps" title="Permanent link">&para;</a></h2>
+<p>Congratulations! You may find your way around to build and run the mesh examples. And further more, you can <a href="../creating-your-own-targets">create your own targets</a>.</p>
+<h2 id="create-an-issue">Create an Issue<a class="headerlink" href="#create-an-issue" title="Permanent link">&para;</a></h2>
+<p>Interested in contributing to this project? Want to report a bug? Feel free to click here:</p>
+<p><a href="https://github.com/makerdiary/grove-mesh-kit/issues/new"><button data-md-color-primary="marsala"><i class="fa fa-github"></i> Create an Issue</button></a></p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../setting-up-the-mesh-sdk/" title="Setting Up the Mesh SDK" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Setting Up the Mesh SDK
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../creating-your-own-targets/" title="Creating your own targets" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Creating your own targets
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2019 makerdiary
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../../assets/fonts/font-awesome.css">
+    
+      <a href="https://community.makerdiary.com" class="md-footer-social__link fa fa-comments"></a>
+    
+      <a href="https://makerdiary.com" class="md-footer-social__link fa fa-globe"></a>
+    
+      <a href="https://github.com/makerdiary" class="md-footer-social__link fa fa-github-alt"></a>
+    
+      <a href="https://twitter.com/makerdiary" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://www.facebook.com/makerdiary" class="md-footer-social__link fa fa-facebook"></a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.24c73612.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+        <script src="../../javascripts/jquery.qrcode.min.js"></script>
+      
+    
+  </body>
+</html>
