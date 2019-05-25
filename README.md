@@ -4,10 +4,11 @@
 
 ## Description
 
-Grove Mesh Kit for nRF52840-MDK is a very versatile mesh networking development kit. It integrates [nRF52840-MDK](https://wiki.makerdiary.com/nrf52840-mdk/) development board, [Base Dock](https://wiki.makerdiary.com/base-dock/) and [SeeedStudio](https://www.seeedstudio.com/)’s most popular and easy-to-use [Grove Modules](https://www.seeedstudio.com/grove.html).
+Grove Mesh Kit for nRF52840-MDK is a very versatile mesh networking development kit. It integrates [nRF52840-MDK](https://wiki.makerdiary.com/nrf52840-mdk/) development board, [Base Dock](https://wiki.makerdiary.com/base-dock/) and [SeeedStudio](https://www.seeedstudio.com/)'s most popular and easy-to-use [Grove Modules](https://www.seeedstudio.com/grove.html).
 
 Grove Mesh Kit takes a full advantage of the multiprotocol capabilities of the nRF52840 SoC by supporting [Bluetooth Mesh](https://wiki.makerdiary.com/grove-mesh-kit/bluetooth-mesh) and [OpenThread Mesh](https://wiki.makerdiary.com/grove-mesh-kit/openthread-mesh) networking. It allows developers to create IoT applications with Mesh Network Connectivity in a very short time.
 
+![](docs/assets/images/grove-mesh-kit-img.png)
 
 ## Features
 
@@ -71,7 +72,7 @@ We think the best way to learn is by doing. And to help you get started, we have
 
 Grove Mesh Kit is available at [Seeed Studio](https://www.seeedstudio.com/) (click to go directly to the product):
 
-[![SeeedStudio](docs/assets/images/seeed_logo_2018_horizontal.png)](https://www.seeedstudio.com/)
+[![SeeedStudio](docs/assets/images/seeed_logo_2018_horizontal.png)](https://www.seeedstudio.com/Grove-Mesh-Kit-for-nRF52840-MDK-p-4053.html)
 
 ## Contributing
 

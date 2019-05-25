@@ -4,7 +4,7 @@
 
 The Grove Mesh Kit is available at [Seeed Studio](https://www.seeedstudio.com/) (click to go directly to the product):
 
-[![SeeedStudio](assets/images/seeed_logo_2018_horizontal.png)](https://www.seeedstudio.com/)
+[![SeeedStudio](assets/images/seeed_logo_2018_horizontal.png)](https://www.seeedstudio.com/Grove-Mesh-Kit-for-nRF52840-MDK-p-4053.html)
 
 
 ## Bulk & Customization
