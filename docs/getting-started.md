@@ -199,7 +199,7 @@ Congratulations! You may find your way around:
 
 * Many more details about the kit hardware can be found here:
 
-	* [nRF52840-MDK Documentation]()
+	* [nRF52840-MDK Documentation](https://wiki.makerdiary.com/nrf52840-mdk)
 	* [Base Dock Documentation](https://wiki.makerdiary.com/base-dock/)
 	* [Grove Wiki](http://wiki.seeedstudio.com/Grove/)
 
