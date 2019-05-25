@@ -4,7 +4,7 @@
 
 Grove Mesh Kit for nRF52840-MDK is a very versatile mesh networking development kit. It integrates [nRF52840-MDK](https://wiki.makerdiary.com/nrf52840-mdk/) development board, [Base Dock](https://wiki.makerdiary.com/base-dock/) and [SeeedStudio](https://www.seeedstudio.com/)'s most popular and easy-to-use [Grove Modules](https://www.seeedstudio.com/grove.html).
 
-Grove Mesh Kit takes a full advantage of the multiprotocol capabilities of the nRF52840 SoC by supporting [Bluetooth Mesh](/bluetooth-mesh) and [OpenThread Mesh](/openthread-mesh) networking. It allows developers to create IoT applications with Mesh Network Connectivity in a very short time.
+Grove Mesh Kit takes a full advantage of the multiprotocol capabilities of the nRF52840 SoC by supporting [Bluetooth Mesh](bluetooth-mesh/) and [OpenThread Mesh](openthread-mesh/) networking. It allows developers to create IoT applications with Mesh Network Connectivity in a very short time.
 
 [![](assets/images/grove-mesh-kit-img.png)](https://www.seeedstudio.com/Grove-Mesh-Kit-for-nRF52840-MDK-p-4053.html)
 
@@ -61,10 +61,10 @@ The key features of the Grove Mesh Kit are:
 
 We think the best way to learn is by doing. And to help you get started, we have provided a series of tutorials. Find the details below.
 
-* [Getting Started with Grove Mesh Kit](/getting-started)
-* [Grove Mesh Kit with nRF5 SDK](/setting-up-nrf5-sdk)
-* [Bluetooth Mesh Networking](/bluetooth-mesh)
-* [OpenThread Mesh Networking](/openthread-mesh)
+* [Getting Started with Grove Mesh Kit](getting-started/)
+* [Grove Mesh Kit with nRF5 SDK](setting-up-nrf5-sdk/)
+* [Bluetooth Mesh Networking](bluetooth-mesh/)
+* [OpenThread Mesh Networking](openthread-mesh/)
 
 ## Create an Issue
 

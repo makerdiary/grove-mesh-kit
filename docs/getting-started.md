@@ -190,12 +190,12 @@ For your convenience, our [Web Device CLI](https://wiki.makerdiary.com/web-devic
 
 Congratulations! You may find your way around:
 
-* Head to the [nRF5 SDK Tutorial Page](/nrf5-sdk) for building an nRF5 SDK example like *Grove CLI*
+* Head to the [nRF5 SDK Tutorial Page](setting-up-nrf5-sdk) for building an nRF5 SDK example like *Grove CLI*
 
 * Check out the Mesh networking tutorials including:
 
-	* [Bluetooth Mesh Network](/ble-mesh)
-	* [OpenThread Mesh Network](/thread-mesh)
+	* [Bluetooth Mesh Network](bluetooth-mesh/)
+	* [OpenThread Mesh Network](openthread-mesh/)
 
 * Many more details about the kit hardware can be found here:
 
